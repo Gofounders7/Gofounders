@@ -1,1 +1,84 @@
+import 'package:flutter/material.dart';
 
+class CommunityScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+
+      // 🔝 Top Bar
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text(
+          "GoFounders",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.person, color: Colors.black),
+            onPressed: () {},
+          )
+        ],
+      ),
+
+      // 📜 Community Feed
+      body: ListView(
+        padding: EdgeInsets.all(16),
+        children: [
+
+          postCard("Startup Idea",
+              "Building AI roadmap tool for founders"),
+
+          postCard("Execution Update",
+              "MVP design completed, testing started"),
+
+          postCard("Tip",
+              "Validate idea before coding anything"),
+        ],
+      ),
+    );
+  }
+
+  // 🔲 Post UI Widget
+  Widget postCard(String title, String subtitle) {
+    return Card(
+      margin: EdgeInsets.only(bottom: 16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      elevation: 2,
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+            Text(title,
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold)),
+
+            SizedBox(height: 8),
+
+            Text(subtitle),
+
+            SizedBox(height: 12),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.thumb_up_alt_outlined),
+                Icon(Icons.comment_outlined),
+                Icon(Icons.share_outlined),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
