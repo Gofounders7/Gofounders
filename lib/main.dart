@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 import 'package:flutter/material.dart';
-import 'screens/community_screen.dart';
+import 'screens/community section.dart';
 
 void main() {
   runApp(GoFoundersApp());
