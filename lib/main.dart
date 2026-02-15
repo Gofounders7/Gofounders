@@ -46,7 +46,7 @@ class GoFoundersApp extends StatelessWidget {
     return MaterialApp(
       title: "GoFounders",
       debugShowCheckedModeBanner: false,
-      home: CommunityScreen(),
+      home: Community section (),
     );
   }
 }
