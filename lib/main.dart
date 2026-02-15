@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 import 'package:flutter/material.dart';
-import 'screens/community section.dart';
+import 'screens/communitysection.dart';
 
 void main() {
   runApp(GoFoundersApp());
@@ -46,7 +46,7 @@ class GoFoundersApp extends StatelessWidget {
     return MaterialApp(
       title: "GoFounders",
       debugShowCheckedModeBanner: false,
-      home: Community section (),
+      home: Communitysection (),
     );
   }
 }
