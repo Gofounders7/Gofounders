@@ -33,3 +33,20 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+import 'package:flutter/material.dart';
+import 'screens/community_screen.dart';
+
+void main() {
+  runApp(GoFoundersApp());
+}
+
+class GoFoundersApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "GoFounders",
+      debugShowCheckedModeBanner: false,
+      home: CommunityScreen(),
+    );
+  }
+}
